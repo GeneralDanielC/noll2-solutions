@@ -1,43 +1,46 @@
-import type { Metadata } from "next";
-import localFont from "next/font/local";
+import type { Metadata, Viewport } from "next";
+import { Victor_Mono } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
-
-const nordicClub = localFont({
-  src: "./fonts/NordicClub.otf",
-  variable: "--font-nordic-club",
-  weight: "100 900",
+const victorMono = Victor_Mono({
+  variable: "--font-victor-mono",
+  weight: [
+    "100",
+    "200",
+    "300",
+    "400",
+    "500",
+    "600",
+    "700"
+  ],
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
   title: "NOLL2 SOLUTIONS",
-  description: "NOLL2 SOLUTIONS AB.",
+  description: "NOLL2 SOLUTIONS specializes in web and app development, delivering custom digital solutions. We also offer professional accounting services to support your business growth.",
 };
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+
+
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${nordicClub.variable} antialiased bg-orange-500/60 h-screen`}
+        className={`${victorMono.className} antialiased bg-black h-screen`}
       >
-        <div className="fixed w-full flex justify-center pt-4">
-          <span className={cn(nordicClub.className, "text-5xl text-amber-600")}>NOLL2</span>
-        </div>
         {children}
       </body>
     </html>

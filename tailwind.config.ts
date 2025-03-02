@@ -20,6 +20,10 @@ export default {
   				DEFAULT: 'hsl(var(--popover))',
   				foreground: 'hsl(var(--popover-foreground))'
   			},
+			  grey: {
+				DEFAULT: '#161616',
+				foreground: '#5A5A5A'
+			},
   			primary: {
   				DEFAULT: 'hsl(var(--primary))',
   				foreground: 'hsl(var(--primary-foreground))'
