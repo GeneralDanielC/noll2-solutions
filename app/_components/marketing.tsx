@@ -39,14 +39,14 @@ export const Marketing = () => {
                     <SplitText text="noll2" className="text-8xl font-bold text-center flex-col items-center justify-center" />
                     <SplitText text="solutions" className="text-6xl font-thin" />
                 </motion.div>
-                <motion.div
+                {/* <motion.div
                     initial="hidden"
                     animate="visible"
                     variants={fadeInFromBottom}
                     className="absolute bottom-10 w-full flex items-center justify-center"
                 >
                     <span className="text-xs text-grey-foreground">read more below</span>
-                </motion.div>
+                </motion.div> */}
             </div>
             <div className="flex flex-col">
                 <motion.div
